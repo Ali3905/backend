@@ -19,6 +19,10 @@ mongoose.connect('mongodb+srv://yashsuryawanshi1722:yash1722@cluster0.e3gefut.mo
   useUnifiedTopology: true,
 });
 
+app.get("/", async (req, res) => {
+    res.send("HomePage")
+}
+
 app.post('/SignUp', async (req, res) => {
   try {
     const { email, password, hospitalName, contact, ambulanceNumber } = req.body;
